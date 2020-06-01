@@ -296,7 +296,7 @@ def hangman_with_hints(secret_word):
     print("You have", num_of_hints, "hint")
     print("Available letters:", get_available_letters(user_guessed_letters))
 
-    while num_of_guesses != 0 and is_word_guessed(secret_word, user_guessed_letters) is False:
+    while num_of_guesses > 0 and is_word_guessed(secret_word, user_guessed_letters) is False:
         print("-------------")
         print("You have", num_of_guesses, "guesses left.")
         print("Available letters:", get_available_letters(user_guessed_letters))
