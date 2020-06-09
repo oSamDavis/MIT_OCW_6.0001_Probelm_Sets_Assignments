@@ -300,7 +300,7 @@ def hangman_with_hints(secret_word):
         print("-------------")
         print("You have", num_of_guesses, "guesses left.")
         print("Available letters:", get_available_letters(user_guessed_letters))
-        guess = input("Please guess a letter")
+        guess = input("Please guess a letter: ")
 
         if guess == "*" and num_of_hints != 0:
             print("Possible word matches are: ")
