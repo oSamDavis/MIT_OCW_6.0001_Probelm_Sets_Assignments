@@ -1,7 +1,7 @@
 # Problem Set 4A
-# Name: <your name here>
-# Collaborators:
-# Time Spent: x:xx
+# Name: Sam Davis Omekara Jr.
+# Collaborators: None
+# Time Spent: ~ 24 hours
 
 def get_permutations(sequence):
     '''
