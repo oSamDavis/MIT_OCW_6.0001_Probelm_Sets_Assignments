@@ -23,19 +23,20 @@ def get_permutations(sequence):
     a different order than what is listed here.
     '''
 
-    if len(sequence) == 1:
-        return [sequence]
+    if len(sequence) == 1:  # base case of recursion: (if sequence is only one letter)
+        return [sequence]  # ... return a list with sequence only
 
-    first_letter = sequence[0]
-    permutations = get_permutations(sequence[1:])
-    res = []
+    first_letter = sequence[0]  # get the first letter of sequence ...
+    permutations = get_permutations(sequence[1:])  # recursively get the permutation of the sequence
+    # removing  it's first letter (unwinding)
+    res = []  # a list to store the permutations(i.e res)
 
-    for element in permutations:
-        for i in range(len(element) + 1):
-            individual_perm = element[:i] + first_letter + element[i:]
-            res.append(individual_perm)
-    return res
-    #pass #delete this line and replace with your code here
+    for element in permutations:  # for each element in permutations ...
+        for i in range(len(element) + 1):  # for i starting @ 0 and ending @ len(element)
+            individual_perm = element[:i] + first_letter + element[i:]  # get the individual permutation by:
+            # concatenate the substring from the beginning to i, the first letter and the substring from i to the end
+            res.append(individual_perm)  # append the individual permutation to the res list
+    return res  # return res
 
 if __name__ == '__main__':
 #    #EXAMPLE
@@ -50,5 +51,4 @@ if __name__ == '__main__':
     print(get_permutations('faruq'))
     print(get_permutations('sam'))
     print(get_permutations('timo'))
-    pass #delete this line and replace with your code here
 
